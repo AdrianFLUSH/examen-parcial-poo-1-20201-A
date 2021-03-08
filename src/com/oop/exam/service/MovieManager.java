@@ -1,13 +1,16 @@
 package com.oop.exam.service;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 import com.oop.exam.model.Movie;
 
 public class MovieManager {
     private LinkedList<Movie> movies;
 
+
     public MovieManager() {
         this.movies = new LinkedList<>();
+
     }
 
     public LinkedList<Movie> getMovies() {
@@ -22,9 +25,11 @@ public class MovieManager {
         int i;
         for(i=0;i< movies.size();i++)
         {
-            if(movies.getTitle() = name ) {
-                return movies;
+            if(movies.get(i).getTitle() == name ) {
+                return movies.get(i);
             }
         }
+        return null;
     }
+
 }
